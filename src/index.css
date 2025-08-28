@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+    font-family: Arial "Ubuntu Mono" serif;
+    line-height: 1.6;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+    --bg: #121212;
+    --fg: #f0f0f0;
+    --accent: #f5f6fa;
+}
+
+[data-theme="green"] {
+    --bg: #1E2F23;
+    --fg: #f0f0f0;
+    --accent: #ffffff;
+}
+
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #222222;
+    --accent: #070707;
+}
+
+body {
+    background-color: var(--bg);
+    color:           var(--fg);
+}
+
+a {
+    color: var(--accent);
+}
+
+
+.small_buttons {
+    @apply
+    p-2
+    bg-[#768948]/30
+    duration-1000
+    hover:bg-green-200/10
+    active:bg-green-200/20
+}
+
+.big_buttons {
+    @apply text-white font-semibold py-3 px-14 rounded-lg my-4 hover:opacity-95 active:opacity-90
+}
+
+
+.input {
+    @apply h-full w-full p-2 rounded duration-700 bg-gray-500/20 outline-0 hover:bg-white/5
+}
+
+.input_data {
+    @apply
+    max-w-100
+    text-center
+    h-full
+    w-full
+    p-3
+    rounded
+    duration-700
+    bg-gray-500/20
+    outline-0
+    hover:bg-white/5
+}
+
+.link {
+    @apply
+    cursor-pointer
+    hover:opacity-80
+}
+
+.category {
+    @apply
+    cursor-pointer
+    duration-1000
+    p-1
+    text-center
+    bg-green-500
+    text-lg
+    shadow
+    rounded
+    hover:opacity-80
+    active:opacity-75
+}
